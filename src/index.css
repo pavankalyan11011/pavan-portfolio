@@ -1,0 +1,346 @@
+@import 'tailwindcss';
+
+:root {
+  /* Ubuntu / aubergine — few colors only */
+  --bg: #2c001e;
+  --bg-soft: #380a28;
+  --panel: #300a24;
+  --panel-2: #260818;
+  --line: rgba(255, 255, 255, 0.1);
+  --orange: #e95420;
+  --text: #eeeeee;
+  --muted: #aea79f;
+  --prompt: #8ae234;
+  --path: #729fcf;
+  --max: 980px;
+  --mono: 'Ubuntu Mono', 'JetBrains Mono', ui-monospace, monospace;
+  --sans: 'Ubuntu', 'DM Sans', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--text);
+  background: radial-gradient(ellipse 90% 60% at 50% -10%, var(--bg-soft), var(--bg));
+  line-height: 1.5;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 20px 18px 40px;
+}
+
+a {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  font-family: var(--mono);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.top__brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.top__logo {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  font-family: var(--mono);
+  font-weight: 700;
+  color: #fff;
+  background: var(--orange);
+  border-radius: 8px;
+}
+
+.top__name {
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.top__role {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.top__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+.main {
+  display: grid;
+  gap: 20px;
+}
+
+.intro h1 {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  font-weight: 650;
+  color: var(--text);
+}
+
+.intro h1 em {
+  font-style: normal;
+  color: var(--orange);
+}
+
+.intro p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 52ch;
+  font-size: 15px;
+}
+
+/* Ubuntu-style terminal window */
+.shell {
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  border-radius: 10px;
+  background: var(--panel);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  cursor: text;
+}
+
+.shell-bar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+  background: #1f0516;
+}
+
+.shell-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.shell-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #5c3a4d;
+}
+
+.shell-dots span:nth-child(1) {
+  background: var(--orange);
+}
+
+.shell-title {
+  margin: 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.shell-hint {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.shell-body {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: min(62vh, 560px);
+}
+
+.term-scroll {
+  padding: 16px 16px 8px;
+  overflow: auto;
+  max-height: min(58vh, 520px);
+  font-family: var(--mono);
+  font-size: 14px;
+  line-height: 1.55;
+  background: var(--panel);
+}
+
+.term-line {
+  margin: 0 0 6px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--mono);
+}
+
+.term-line--sys {
+  color: var(--muted);
+}
+
+.term-line--out {
+  color: var(--text);
+}
+
+.term-line--cmd {
+  color: var(--text);
+  margin-top: 10px;
+}
+
+.term-prompt {
+  font-family: var(--mono);
+}
+
+/* Classic Ubuntu bash prompt: green user@host, blue path */
+.term-user,
+.term-host {
+  color: var(--prompt);
+  font-weight: 600;
+}
+
+.term-at,
+.term-colon,
+.term-dollar {
+  color: var(--text);
+}
+
+.term-path {
+  color: var(--path);
+  font-weight: 600;
+}
+
+.term-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 4px;
+}
+
+.term-input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 14px;
+  caret-color: var(--text);
+  padding: 0;
+}
+
+.shell-chips {
+  border-top: 1px solid var(--line);
+  padding: 12px 14px 14px;
+  background: #1f0516;
+}
+
+.shell-chips__label {
+  margin: 0 0 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.shell-chips__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(233, 84, 32, 0.55);
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.chip:hover {
+  background: rgba(233, 84, 32, 0.18);
+  border-color: var(--orange);
+}
+
+.foot {
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 12px;
+  font-family: var(--mono);
+}
+
+.foot p {
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .shell-hint {
+    display: none;
+  }
+
+  .shell-bar {
+    grid-template-columns: auto 1fr;
+  }
+
+  .foot {
+    flex-direction: column;
+  }
+
+  .term-scroll {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chip {
+    transition: none;
+  }
+}
