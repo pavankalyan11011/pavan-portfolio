@@ -1,4 +1,5 @@
 import {
+  achievements,
   education,
   experience,
   featuredWork,
@@ -14,6 +15,7 @@ export const FILES = [
   'skills.txt',
   'key-work.txt',
   'projects.txt',
+  'achievements.txt',
   'education.txt',
   'contact.txt',
   'resume.pdf',
@@ -122,14 +124,21 @@ function formatKeyWork() {
 }
 
 function formatProjects() {
-  const rows = projects.map((p, i) =>
-    [
+  const rows = projects.map((p, i) => {
+    const points = (p.points || [])
+      .map((pt) => `  • ${wrap(pt, 68).replace(/\n/g, '\n    ')}`)
+      .join('\n')
+    return [
       `────────────────────────────────────────`,
       `[${i + 1}] ${p.title} (${p.year})`,
       `    Stack: ${p.stack.join(', ')}`,
+      p.github ? `    GitHub: ${p.github}` : null,
       `    ${wrap(p.description, 68)}`,
-    ].join('\n'),
-  )
+      points || null,
+    ]
+      .filter(Boolean)
+      .join('\n')
+  })
   return [
     '════════════════════════════════════════',
     '  PROJECTS  ·  Software Builds',
@@ -137,8 +146,22 @@ function formatProjects() {
     '',
     ...rows,
     '',
-    'Next:  cat education.txt   or   cat contact.txt',
+    'Tip: open RecoverAI repo with  recoverai',
+    'Next:  cat achievements.txt   or   cat contact.txt',
   ].join('\n')
+}
+
+function formatAchievements() {
+  const rows = achievements.map((a, i) => `[${i + 1}] ${wrap(a, 70)}`)
+  return [
+    '════════════════════════════════════════',
+    '  ACHIEVEMENTS',
+    '════════════════════════════════════════',
+    '',
+    ...rows,
+    '',
+    'Repo: https://github.com/pavankalyan11011/RecovaryAI',
+  ].join('\n\n')
 }
 
 function formatEducation() {
@@ -192,6 +215,8 @@ const FILE_CONTENT = {
   work: formatKeyWork,
   'projects.txt': formatProjects,
   projects: formatProjects,
+  'achievements.txt': formatAchievements,
+  achievements: formatAchievements,
   'education.txt': formatEducation,
   education: formatEducation,
   'contact.txt': formatContact,
@@ -212,12 +237,14 @@ function helpText() {
     '  cat skills.txt       technical skills',
     '  cat key-work.txt     Amealio product work',
     '  cat projects.txt     personal / side projects',
+    '  cat achievements.txt Razorpay Buildathon & RecoverAI',
     '  cat education.txt    education',
     '  cat contact.txt      email, LinkedIn, GitHub',
     '',
     '── Developer shortcuts ─────────────────',
     '  whoami               name + title',
     '  stack                same as skills.txt',
+    '  recoverai            open RecoverAI GitHub',
     '  neofetch             developer profile card',
     '  resume               download PDF resume',
     '  github / linkedin    open profiles',
@@ -251,9 +278,10 @@ function neofetch() {
     `Focus:    Java Full Stack + MERN`,
     `Company:  Amealio (Intern Developer)`,
     `Location: ${profile.location}`,
-    `Stack:    React, Node, Feathers, Spring Boot`,
-    `Data:     SQL, MongoDB, Oracle, PostgreSQL`,
+    `Stack:    React, Spring Boot, Razorpay, LLMs`,
+    `Data:     PostgreSQL, MySQL, Oracle, MongoDB`,
     `Tools:    Git, Jira, Figma, Cursor, Postman`,
+    `Highlight:RecoverAI · Razorpay AI Buildathon`,
     `Shell:    bash`,
     `Status:   ${profile.openTo}`,
     `Resume:   type  resume  to download`,
@@ -273,12 +301,13 @@ function tree() {
     '├── experience.txt     ← jobs',
     '├── skills.txt         ← tech stack',
     '├── key-work.txt       ← Amealio work',
-    '├── projects.txt       ← side projects',
+    '├── projects.txt       ← side projects (RecoverAI…)',
+    '├── achievements.txt',
     '├── education.txt',
     '├── contact.txt',
     '└── resume.pdf',
     '',
-    'Try: cat about.txt',
+    'Try: cat projects.txt',
   ].join('\n')
 }
 
@@ -419,6 +448,18 @@ export function runCommand(rawInput) {
         url: profile.github,
       }
 
+    case 'recoverai':
+    case 'recoveryai':
+    case 'recovaryai':
+      return {
+        lines: [
+          'Opening RecoverAI — AI payment recovery (Razorpay AI Buildathon)',
+          'https://github.com/pavankalyan11011/RecovaryAI',
+        ],
+        action: 'open',
+        url: 'https://github.com/pavankalyan11011/RecovaryAI',
+      }
+
     case 'linkedin':
     case 'in':
       return {
@@ -478,6 +519,7 @@ export function getCompletions(partial) {
     'stack',
     'tree',
     'resume',
+    'recoverai',
     'github',
     'linkedin',
     'mail',
@@ -494,9 +536,9 @@ export const SUGGESTIONS = [
   'help',
   'ls',
   'cat about.txt',
-  'cat experience.txt',
-  'cat skills.txt',
-  'cat key-work.txt',
+  'cat projects.txt',
+  'cat achievements.txt',
+  'recoverai',
   'resume',
   'github',
 ]

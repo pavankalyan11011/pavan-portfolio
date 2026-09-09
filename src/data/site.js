@@ -12,14 +12,14 @@ export const profile = {
   github: 'https://github.com/pavankalyan11011',
   resume: '/Pavan-Kalyan-Valisetti-Resume.pdf',
   summary:
-    'Software Developer (Full Stack) contributing to Amealio, a hospitality SaaS platform spanning user, merchant, and admin applications. Experienced in React.js, Redux / Redux Toolkit, Node.js, Express.js, Feathers.js, REST APIs, JWT, and Socket.io. Strong at translating Figma designs into responsive UI, integrating backend APIs, and collaborating in agile teams. Also comfortable with Java, Spring Boot, SQL databases, AWS basics, Hostinger hosting, and Cursor for AI-assisted development.',
+    'Software Developer building production web systems across frontend and backend. Experienced in React, Redux / Redux Toolkit, Node.js / Express / Feathers, Java / Spring Boot, REST APIs, JWT, and PostgreSQL. Designed and shipped RecoverAI — a microservices payment-recovery platform with Razorpay webhooks, Payment Links, and multi-provider LLM analysis. Currently contributing to Amealio (consumer, merchant, admin apps): translating Figma to UI, integrating API contracts, and delivering features in agile delivery with Git/Jira.',
   openTo: 'Full-time roles and freelance software development',
 }
 
 export const skillGroups = [
   {
     title: 'Languages',
-    items: ['Java', 'JavaScript', 'HTML', 'CSS', 'SQL'],
+    items: ['Java', 'JavaScript', 'SQL', 'HTML', 'CSS'],
   },
   {
     title: 'Frontend',
@@ -28,131 +28,154 @@ export const skillGroups = [
       'Next.js',
       'Redux',
       'Redux Toolkit',
-      'Redux Thunk',
-      'React Hooks',
       'React Router',
-      'Material-UI',
+      'Hooks',
+      'MUI',
       'Tailwind CSS',
-      'Bootstrap',
       'Formik',
       'Yup',
     ],
   },
   {
-    title: 'Backend & APIs',
+    title: 'Backend',
     items: [
+      'Spring Boot',
       'Node.js',
       'Express.js',
       'Feathers.js',
-      'Spring Boot',
-      'Socket.io',
       'REST APIs',
       'JWT',
+      'Socket.io',
       'axios',
     ],
   },
   {
-    title: 'Cloud & Hosting',
-    items: ['AWS basics (EC2, S3, IAM)', 'Hostinger'],
-  },
-  {
-    title: 'Databases',
-    items: ['Oracle DB', 'PostgreSQL', 'MySQL', 'MongoDB', 'Supabase', 'SQL'],
-  },
-  {
-    title: 'Tools',
+    title: 'Payments & AI',
     items: [
-      'Git / GitHub',
-      'Jira',
-      'Postman',
-      'Playwright',
-      'Figma',
-      'VS Code',
+      'Razorpay (Checkout, Payment Links, Webhooks)',
+      'Groq',
+      'OpenAI',
+      'Gemini API',
+    ],
+  },
+  {
+    title: 'Data',
+    items: ['PostgreSQL', 'MySQL', 'Oracle DB', 'MongoDB', 'Supabase'],
+  },
+  {
+    title: 'Infra & Tools',
+    items: [
+      'Git/GitHub',
       'Maven',
+      'Postman',
+      'Jira',
+      'Figma',
+      'Cloudflare Tunnel',
+      'AWS basics (EC2, S3, IAM)',
       'Cursor',
-      'Linux (Basics)',
+      'VS Code',
     ],
   },
 ]
 
 export const experience = [
   {
-    role: 'Intern Developer',
-    company: 'Envisionard Ads and Marketing Pvt Ltd (Amealio)',
+    role: 'Software Developer Intern',
+    company: 'Envisionard (Amealio)',
     period: 'Jan 2026 — Present',
     location: 'Hyderabad',
     tags: ['React', 'Redux', 'Node.js', 'Feathers.js', 'Socket.io'],
     points: [
-      "Contributed to Amealio's multi-role product ecosystem: consumer web app, merchant dashboard, and super-admin dashboard.",
-      'Translated Figma designs into responsive React UI components; integrated REST API data and aligned frontend behavior with backend API contracts.',
-      'User app: enhanced consumer-facing flows including home, restaurant discovery, menu/ordering, seating, experiences, and profile using React 18, Redux Toolkit, React Router v6, and MUI.',
-      'Merchant dashboard: seating, orders, experiences, settlements, and onboarding using React, Redux Thunk, reusable components, and Formik/Yup validation.',
-      'Admin dashboard: settlements, wallet transactions, category/icon management, and operational reports using classic Redux and role-based routing.',
-      'Worked with Node.js, Express.js, and Feathers.js for backend API integration, JWT authentication flows, and real-time updates using Socket.io across dev/QA/UAT.',
-      'Used Git/GitHub for version control and pull requests, Jira for task tracking, and participated in debugging, UI fixes, and code reviews.',
-      'Used Cursor for AI-assisted workflows to speed up prototyping, refactoring, and iterative development.',
+      'Own feature delivery across a multi-tenant hospitality SaaS: consumer web, merchant dashboard, and super-admin — React UI, Redux state, and REST/JWT contracts.',
+      'Implement design-to-code from Figma: reusable components, responsive layouts, form validation (Formik/Yup), and route-level auth guards.',
+      'User app: shipping discovery, menu/ordering, seating, experiences, and profile flows with React 18, Redux Toolkit, React Router v6, MUI, and redux-persist.',
+      'Merchant / Admin: built operational modules (seating, orders, experiences, settlements, wallet, onboarding, reporting) with thunks, role-based routing, and shared error/loading patterns.',
+      'Integrate Node.js, Express, and Feathers.js APIs with axios; wire Socket.io for real-time updates across dev/QA/UAT.',
+      'Collaborate via GitHub PRs, code review, and Jira; use Cursor for faster prototyping/refactors without sacrificing readability.',
     ],
   },
   {
-    role: 'Java Full Stack Developer',
+    role: 'Java Full Stack Developer (Training)',
     company: 'Websoft Technologies',
     period: 'Feb 2025 — Dec 2025',
     location: 'Hyderabad',
     tags: ['Java', 'Spring Boot', 'SQL', 'Oracle DB', 'PostgreSQL'],
     points: [
-      'Completed hands-on training in Java, Spring Boot, React.js, Oracle DB / PostgreSQL / MySQL, JWT, role-based access, and responsive UI with Tailwind CSS.',
-      'Practiced REST API development and client-server integration; debugged and validated implementations using Postman and Maven.',
-      'Used Git for development workflow and maintained a clean modular structure for full-stack software development.',
+      'Built full-stack foundations in Java, Spring Boot, React, JWT/RBAC, and relational DBs (Oracle, PostgreSQL, MySQL).',
+      'Designed and tested REST APIs with Postman/Maven; practiced modular layering, client-server integration, and Git-based workflows.',
     ],
   },
 ]
 
 export const featuredWork = [
   {
-    title: 'amealio_web_app — User Application',
+    title: 'Amealio — Consumer, Merchant & Admin Platforms',
     year: '2026',
-    stack: ['React 18', 'Redux Toolkit', 'MUI'],
+    stack: ['React 18', 'Redux Toolkit', 'Node.js', 'Feathers.js'],
     points: [
-      'Contributed to a modern consumer web application covering food ordering, seating, experiences, restaurant details, and user profile flows.',
-      'Worked with Redux Toolkit slices, redux-persist, protected routes, and API hooks to connect UI with backend data.',
-      'Implemented UI enhancements from design specs with reusable components and route-based screen updates.',
-    ],
-  },
-  {
-    title: 'Amealio Dashboard MVP — Merchant & Admin',
-    year: '2026',
-    stack: ['React', 'Redux', 'Node.js', 'Express', 'Feathers.js'],
-    points: [
-      'Contributed to a large React dashboard used by restaurant vendors and super admins for day-to-day operations.',
-      'Enhanced merchant flows: seating, orders, experiences, reports, and vendor onboarding.',
-      'Enhanced admin flows: settlements, donations, wallet transactions, activity reports, and vendor management.',
-      'Integrated Redux state management with Node.js/Express/Feathers REST APIs and shared loader/error handling.',
+      'Contributed to production SaaS surfaces: ordering/seating/experiences on consumer web; vendor ops and admin settlements/reporting on dashboards.',
+      'Connected UI to backend with Redux slices/thunks, protected routes, axios auth, and Socket.io real-time channels.',
     ],
   },
 ]
 
 export const projects = [
   {
+    title: 'RecoverAI',
+    year: '2026',
+    stack: [
+      'React',
+      'Spring Boot',
+      'Razorpay',
+      'Groq/OpenAI/Gemini',
+      'PostgreSQL',
+    ],
+    github: 'https://github.com/pavankalyan11011/RecovaryAI',
+    description:
+      'AI revenue-recovery system that turns failed Razorpay checkouts into recoverable cases via Payment Links and optional SMS/email notify.',
+    points: [
+      'Split architecture into customer-service and merchant-service (Java 21 / Spring Boot 3), each with its own Postgres + JWT — no shared DB; Razorpay is the integration bus.',
+      'Implemented signed webhooks (payment.failed, payment.captured, order.paid, payment_link.*) with HMAC verification, event-id idempotency, and Cloudflare Tunnel for local delivery.',
+      'Built recovery pipeline: eligibility guards, Analyze (Groq → OpenAI → Gemini), Auto Payment Links policy, Approve/Execute, and merchant Recovery UI (bands, mass deploy, metrics).',
+    ],
+  },
+  {
+    title: 'Amealio — Consumer, Merchant & Admin Platforms',
+    year: '2026',
+    stack: ['React 18', 'Redux Toolkit', 'Node.js', 'Feathers.js'],
+    description:
+      'Production SaaS surfaces for hospitality: ordering/seating/experiences on consumer web; vendor ops and admin settlements/reporting on dashboards.',
+    points: [
+      'Connected UI to backend with Redux slices/thunks, protected routes, axios auth, and Socket.io real-time channels.',
+    ],
+  },
+  {
     title: 'Gemini Chat Application',
     year: '2025',
     stack: ['React.js', 'Spring Boot', 'Google Gemini API'],
     description:
-      'Developed an AI chat application integrating Google Gemini API for real-time responses. Built React frontend and Spring Boot REST backend with CORS and centralized error handling.',
+      'Built an AI chat client/server with Gemini API, CORS-safe Spring Boot REST endpoints, and centralized error handling.',
   },
   {
-    title: 'Awreate — Contact and Email Automation System',
+    title: 'Awreate — Contact & Email Automation',
     year: '2025',
     stack: ['Spring Boot', 'JavaMailSender'],
     description:
-      'Created responsive frontend and backend workflow for contact submissions and automated email notifications.',
+      'Implemented contact submission APIs and automated email notification workflows with a responsive frontend.',
   },
   {
     title: 'Retro Industries Web Platform',
     year: '2025',
     stack: ['Java', 'Spring Boot', 'REST APIs'],
     description:
-      'Developed full-stack web platform with modular REST APIs and responsive UI.',
+      'Developed modular REST backends and a responsive UI for a full-stack business web platform.',
   },
+]
+
+export const achievements = [
+  'Razorpay AI Buildathon (2026) — Built and submitted RecoverAI: AI failed-payment recovery with Razorpay Checkout, Payment Links, signed webhooks, and multi-provider LLM analysis (Groq / OpenAI / Gemini).',
+  'Designed webhook-driven microservices (dual Postgres, JWT) that bridge checkout failures to merchant recovery without cross-service DB coupling.',
+  'Open-sourced implementation & docs: github.com/pavankalyan11011/RecovaryAI',
 ]
 
 export const education = [
