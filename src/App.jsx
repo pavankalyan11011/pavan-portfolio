@@ -12,6 +12,9 @@ export default function App() {
             <p className="top__role">{profile.role}</p>
           </div>
         </div>
+        <p className="top__hint">
+          Type <code>help</code> or tap a chip · interactive software developer resume
+        </p>
         <div className="top__links">
           <a href={profile.resume} download>
             resume.pdf
@@ -26,23 +29,11 @@ export default function App() {
       </header>
 
       <main className="main">
-        <section className="intro">
-          <h1>
-            Explore this resume
-            <br />
-            <em>like Ubuntu terminal</em>
-          </h1>
-          <p>
-            Same content as my CV — About, Experience, Skills, Key Work, Projects,
-            Education, Contact. Type <code>help</code> or tap a chip to explore.
-          </p>
-        </section>
-
         <Terminal />
       </main>
 
       <footer className="foot">
-        <p>Interactive resume for software developer roles · not a real shell</p>
+        <p>Not a real shell · Ubuntu-style CV explorer</p>
         <p>© {new Date().getFullYear()} {profile.name}</p>
       </footer>
     </div>
