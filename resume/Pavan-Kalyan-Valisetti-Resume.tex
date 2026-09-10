@@ -1,0 +1,199 @@
+%-------------------------
+% Resume in LaTeX
+% Author : Pavan Kalyan Valisetti
+% Software Engineer–centric
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\usetikzlibrary{svg.path}
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape PAVAN KALYAN VALISETTI} \\ \vspace{1pt}
+    {\large Software Developer} \\ \vspace{2pt}
+    Hyderabad, Telangana \\ \vspace{4pt}
+    \small
+    \href{tel:+916304672477}{\raisebox{-0.3\height}\faPhone\ \underline{+91 6304672477}} ~
+    \href{mailto:vallishettipawan@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{vallishettipawan@gmail.com}} ~
+    \href{https://www.linkedin.com/in/pavankalyan11011}{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{linkedin.com/in/pavankalyan11011}} ~
+    \href{https://github.com/pavankalyan11011}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/pavankalyan11011}}
+\end{center}
+\vspace{0.5mm}
+
+%----------SUMMARY----------
+\section{SUMMARY}
+\resumeItem{\normalsize{
+Software Developer building production web systems across frontend and backend. Experienced in \textbf{React}, \textbf{Redux / Redux Toolkit}, \textbf{Node.js / Express / Feathers}, \textbf{Java / Spring Boot}, \textbf{REST APIs}, \textbf{JWT}, and \textbf{PostgreSQL}. Designed and shipped \textbf{RecoverAI} --- a microservices payment-recovery platform with Razorpay webhooks, Payment Links, and multi-provider LLM analysis. Currently contributing to \textbf{Amealio} (consumer, merchant, admin apps): translating Figma to UI, integrating API contracts, and delivering features in agile delivery with Git/Jira.}}
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+    {\textbf{\large{Software Developer Intern -- Envisionard (Amealio)}}}{Jan 2026 -- Present}\\
+\resumeItemListStart
+    \resumeItem{\normalsize{Own feature delivery across a multi-tenant hospitality SaaS: \textbf{consumer web}, \textbf{merchant dashboard}, and \textbf{super-admin} --- React UI, Redux state, and REST/JWT contracts.}}
+    \resumeItem{\normalsize{Implement design-to-code from \textbf{Figma}: reusable components, responsive layouts, form validation (\textbf{Formik/Yup}), and route-level auth guards.}}
+    \resumeItem{\normalsize{\textbf{User app:} Shipping discovery, menu/ordering, seating, experiences, and profile flows with \textbf{React 18}, \textbf{Redux Toolkit}, \textbf{React Router v6}, \textbf{MUI}, and \textbf{redux-persist}.}}
+    \resumeItem{\normalsize{\textbf{Merchant / Admin:} Built operational modules (seating, orders, experiences, settlements, wallet, onboarding, reporting) with thunks, role-based routing, and shared error/loading patterns.}}
+    \resumeItem{\normalsize{Integrate \textbf{Node.js}, \textbf{Express}, and \textbf{Feathers.js} APIs with \textbf{axios}; wire \textbf{Socket.io} for real-time updates across dev/QA/UAT.}}
+    \resumeItem{\normalsize{Collaborate via \textbf{GitHub PRs}, code review, and \textbf{Jira}; use \textbf{Cursor} for faster prototyping/refactors without sacrificing readability.}}
+\resumeItemListEnd
+\vspace{-8pt}
+
+\resumeProjectHeading
+    {\textbf{\large{Java Full Stack Developer (Training) -- Websoft Technologies}}}{Feb 2025 -- Dec 2025}\\
+\resumeItemListStart
+    \resumeItem{\normalsize{Built full-stack foundations in \textbf{Java}, \textbf{Spring Boot}, \textbf{React}, \textbf{JWT}/RBAC, and relational DBs (\textbf{Oracle}, \textbf{PostgreSQL}, \textbf{MySQL}).}}
+    \resumeItem{\normalsize{Designed and tested REST APIs with \textbf{Postman}/\textbf{Maven}; practiced modular layering, client-server integration, and Git-based workflows.}}
+\resumeItemListEnd
+\vspace{-8pt}
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+\vspace{-5pt}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+    {\textbf{\large{\href{https://github.com/pavankalyan11011/RecovaryAI}{RecoverAI}}} $|$ \emph{React, Spring Boot, Razorpay, Groq/OpenAI/Gemini, PostgreSQL}}{\hfill\textit{2026}}\\
+\resumeItemListStart
+    \resumeItem{\normalsize{Engineered an AI revenue-recovery system that turns failed Razorpay checkouts into recoverable cases via Payment Links and optional SMS/email notify.}}
+    \resumeItem{\normalsize{Split architecture into \textbf{customer-service} and \textbf{merchant-service} (Java 21 / Spring Boot 3), each with its own Postgres + JWT --- no shared DB; Razorpay is the integration bus.}}
+    \resumeItem{\normalsize{Implemented signed webhooks (\texttt{payment.failed}, \texttt{payment.captured}, \texttt{order.paid}, \texttt{payment\_link.*}) with HMAC verification, event-id idempotency, and Cloudflare Tunnel for local delivery.}}
+    \resumeItem{\normalsize{Built recovery pipeline: eligibility guards, Analyze (\textbf{Groq $\rightarrow$ OpenAI $\rightarrow$ Gemini}), Auto Payment Links policy, Approve/Execute, and merchant Recovery UI (bands, mass deploy, metrics).}}
+\resumeItemListEnd
+\vspace{-10pt}
+
+\resumeProjectHeading
+    {\textbf{\large{Gemini Chat Application}} $|$ \emph{React.js, Spring Boot, Google Gemini API}}{\hfill\textit{2025}}\\
+\resumeItemListStart
+    \resumeItem{\normalsize{Built an AI chat client/server with Gemini API, CORS-safe Spring Boot REST endpoints, and centralized error handling.}}
+\resumeItemListEnd
+\vspace{-10pt}
+
+\resumeProjectHeading
+    {\textbf{\large{Awreate -- Contact \& Email Automation}} $|$ \emph{Spring Boot, JavaMailSender}}{\hfill\textit{2025}}\\
+\resumeItemListStart
+    \resumeItem{\normalsize{Implemented contact submission APIs and automated email notification workflows with a responsive frontend.}}
+\resumeItemListEnd
+\vspace{-8pt}
+
+\resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{ACHIEVEMENTS}
+\resumeItemListStart
+    \resumeItem{\normalsize{\textbf{Razorpay AI Buildathon (2026)} --- Built and submitted \textbf{RecoverAI}: AI failed-payment recovery with Razorpay Checkout, Payment Links, signed webhooks, and multi-provider LLM analysis (\textbf{Groq / OpenAI / Gemini}).}}
+    \resumeItem{\normalsize{Designed webhook-driven microservices (dual Postgres, JWT) that bridge checkout failures to merchant recovery without cross-service DB coupling.}}
+    \resumeItem{\normalsize{Open-sourced implementation \& docs: \href{https://github.com/pavankalyan11011/RecovaryAI}{\underline{github.com/pavankalyan11011/RecovaryAI}}.}}
+\resumeItemListEnd
+\vspace{-10pt}
+
+%-----------SKILLS-----------
+\section{SKILLS}
+\begin{itemize}[leftmargin=0.1in, label={}]
+    \small{\item{
+     \textbf{\normalsize{Languages:}}{\normalsize Java, JavaScript, SQL, HTML, CSS} \\
+     \textbf{\normalsize{Frontend:}}{\normalsize React.js, Next.js, Redux, Redux Toolkit, React Router, Hooks, MUI, Tailwind CSS, Formik, Yup} \\
+     \textbf{\normalsize{Backend:}}{\normalsize Spring Boot, Node.js, Express.js, Feathers.js, REST APIs, JWT, Socket.io, axios} \\
+     \textbf{\normalsize{Payments \& AI:}}{\normalsize Razorpay (Checkout, Payment Links, Webhooks), Groq, OpenAI, Gemini API} \\
+     \textbf{\normalsize{Data:}}{\normalsize PostgreSQL, MySQL, Oracle DB, MongoDB, Supabase} \\
+     \textbf{\normalsize{Infra \& Tools:}}{\normalsize Git/GitHub, Maven, Postman, Jira, Figma, Cloudflare Tunnel, AWS basics (EC2, S3, IAM), Cursor, VS Code}
+    }}
+\end{itemize}
+\vspace{-12pt}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+\resumeSubHeadingListStart
+\resumeSubheading
+    {Avanthi Institute of Engineering}{2025 -- 2027}
+    {MCA - Master of Computer Applications}{Hyderabad, India}
+\resumeSubheading
+    {University College of Science, Saifabad, Osmania University}{2022 -- 2025}
+    {BCA - Bachelor of Computer Applications - \textbf{85\%}}{Hyderabad, India}
+\resumeSubheading
+    {Narayana Junior College}{2020 -- 2022}
+    {Intermediate - MPC - \textbf{78\%}}{Hyderabad, India}
+\resumeSubheading
+    {Ravindra Bharathi School}{2018 -- 2020}
+    {SSC - Secondary School Certificate - \textbf{9.5 CGPA}}{Hyderabad, India}
+\resumeSubHeadingListEnd
+
+\end{document}

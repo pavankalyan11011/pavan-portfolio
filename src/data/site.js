@@ -140,16 +140,6 @@ export const projects = [
     ],
   },
   {
-    title: 'Amealio — Consumer, Merchant & Admin Platforms',
-    year: '2026',
-    stack: ['React 18', 'Redux Toolkit', 'Node.js', 'Feathers.js'],
-    description:
-      'Production SaaS surfaces for hospitality: ordering/seating/experiences on consumer web; vendor ops and admin settlements/reporting on dashboards.',
-    points: [
-      'Connected UI to backend with Redux slices/thunks, protected routes, axios auth, and Socket.io real-time channels.',
-    ],
-  },
-  {
     title: 'Gemini Chat Application',
     year: '2025',
     stack: ['React.js', 'Spring Boot', 'Google Gemini API'],
@@ -162,13 +152,6 @@ export const projects = [
     stack: ['Spring Boot', 'JavaMailSender'],
     description:
       'Implemented contact submission APIs and automated email notification workflows with a responsive frontend.',
-  },
-  {
-    title: 'Retro Industries Web Platform',
-    year: '2025',
-    stack: ['Java', 'Spring Boot', 'REST APIs'],
-    description:
-      'Developed modular REST backends and a responsive UI for a full-stack business web platform.',
   },
 ]
 
